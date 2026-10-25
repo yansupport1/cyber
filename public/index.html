@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Tools Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1><span class="glitch" data-text="CYBER//TOOLS">CYBER//TOOLS</span></h1>
+      <p class="sub">&gt; web recon panel_<span class="cursor">█</span></p>
+    </header>
+
+    <form id="form" class="panel" autocomplete="off">
+      <label for="target">TARGET (domain / IP)</label>
+      <input id="target" type="text" placeholder="example.com" required>
+
+      <label for="tool">TOOL</label>
+      <select id="tool">
+        <option value="scan">Port Scanner (Nmap-lite)</option>
+        <option value="headers">HTTP Headers Checker</option>
+        <option value="whois_lookup">Whois Lookup</option>
+        <option value="dns_lookup">DNS Lookup</option>
+      </select>
+
+      <div id="portsRow">
+        <label for="ports">PORTS (opsional, mis. 22,80,443 atau 1-100)</label>
+        <input id="ports" type="text" placeholder="common">
+      </div>
+
+      <button id="run" type="submit">▶ EXECUTE</button>
+      <p class="warn">⚠ Gunakan hanya pada target milikmu atau yang sudah memberi izin.</p>
+    </form>
+
+    <section class="panel">
+      <div class="term-bar"><span></span><span></span><span></span> terminal@output</div>
+      <pre id="output" class="term">$ menunggu perintah...</pre>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
